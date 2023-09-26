@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "allowUmdGlobalAccess": true,
+    "jsx": "react"
+  }
+}
