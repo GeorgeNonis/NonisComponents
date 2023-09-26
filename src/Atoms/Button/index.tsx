@@ -1,13 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import { ButtonProps } from "./button.props";
-import { StyledButton } from "./button.styles";
+import { LdsDualRing, StyledButton } from "./button.styles";
 
 const Button = ({
   children,
   disabled,
   enableThrottle,
-  delayThrottle,
+  delayThrottle = 1000,
   onClick,
+  loading,
+  spinnerBorderColor,
   ...props
 }: ButtonProps) => {
   const [isDisabled, setIsDisabled] = useState(disabled);
@@ -26,8 +28,24 @@ const Button = ({
   useEffect(() => setIsDisabled(disabled), [disabled]);
 
   return (
-    <StyledButton disabled={isDisabled} onClick={throttleOnClick} {...props}>
-      {children}
+    <StyledButton
+      disabled={isDisabled || loading}
+      onClick={throttleOnClick}
+      {...props}
+    >
+      {loading && isDisabled ? (
+        <LdsDualRing
+          css={{
+            ...(spinnerBorderColor && {
+              "&:after": {
+                borderColor: spinnerBorderColor,
+              },
+            }),
+          }}
+        />
+      ) : (
+        children
+      )}
     </StyledButton>
   );
 };
