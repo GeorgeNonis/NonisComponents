@@ -2,6 +2,22 @@ import { useCallback, useEffect, useState } from "react";
 import { ButtonProps } from "./button.props";
 import { LdsDualRing, StyledButton } from "./button.styles";
 
+/**
+ * Button component which provides loading and throttling functionality.
+ *
+ * @param {ReactNode} children - The content to be displayed inside the button.
+ * @param {boolean} disabled - Determines if the button should start in a disabled state.
+ * @param {boolean} loading - Indicates if the button should show as loading.
+ * @param {Function} onClick - Callback function when the button is clicked.
+ * @param {boolean} enableThrottle - If set to true, button clicks will be throttled.
+ * @param {React.Ref<HTMLButtonElement>} ref - Ref forwarded for DOM access.
+ * @param {number} delayThrottle - Duration in milliseconds for which the button remains disabled after a click. Default is 1 second.
+ *
+ * @example
+ * <Button onClick={handleClick} enableThrottle>
+ *   Click Me
+ * </Button>
+ */
 const Button = ({
   children,
   disabled,
