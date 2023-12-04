@@ -1,5 +1,5 @@
+import type { GridProps } from "./grid.props";
 import { forwardRef, ReactElement } from "react";
-import { GridProps } from "./grid.props";
 import { StyledGrid } from "./grid.styles";
 
 /**
