@@ -18,3 +18,17 @@ export const Secondary: StoryObj<typeof Button> = {
     children: "Secondary",
   },
 };
+export const Disabled: StoryObj<typeof Button> = {
+  args: {
+    children: "Secondary",
+    disabled: true,
+  },
+};
+export const Loading: StoryObj<typeof Button> = {
+  args: {
+    children: "Loading",
+    disabled: true,
+    loading: true,
+    spinnerBorderColor: "red transparent red transparent",
+  },
+};
