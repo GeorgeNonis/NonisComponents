@@ -19,5 +19,6 @@ export const Secondary: StoryObj<typeof Input> = {
     css: {
       padding: 10,
     },
+    round: true,
   },
 };
