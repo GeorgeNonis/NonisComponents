@@ -12,7 +12,9 @@ import { StyledGrid } from "./grid.styles";
  * <Grid autoFlow="row" gap={16}>Content</Grid>
  */
 const Grid = forwardRef<HTMLDivElement, GridProps>(
-  (props, ref): ReactElement => <StyledGrid {...props} ref={ref} />
+  ({ round, ...props }, ref): ReactElement => (
+    <StyledGrid round={round} {...props} ref={ref} />
+  )
 );
 
 Grid.displayName = "Grid";

@@ -1,4 +1,4 @@
-import { styled } from "../../../../globalStyles";
+import { styled } from "@stitches/react";
 
 export const StyledGrid = styled("div", {
   display: "grid",
@@ -32,6 +32,11 @@ export const StyledGrid = styled("div", {
     centerItems: {
       true: {
         placeItems: "center",
+      },
+    },
+    round: {
+      true: {
+        borderRadius: 8,
       },
     },
   },
