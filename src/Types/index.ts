@@ -1,3 +1,9 @@
+import { config, keyframes } from "../Styles/stitches.config";
+import type * as Stitches from "@stitches/react";
+
+export type CSS = Stitches.CSS<typeof config>;
+export type Keyframe = ReturnType<typeof keyframes>;
+
 export interface DataCy {
   ["data-cy"]?: string;
 }
