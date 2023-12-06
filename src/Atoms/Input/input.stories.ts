@@ -13,3 +13,11 @@ export const Default: StoryObj<typeof Input> = {
     placeholder: "Default",
   },
 };
+export const Secondary: StoryObj<typeof Input> = {
+  args: {
+    placeholder: "Secondary",
+    css: {
+      padding: 10,
+    },
+  },
+};
