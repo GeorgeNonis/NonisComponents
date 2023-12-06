@@ -26,6 +26,7 @@ const Button = ({
   onClick,
   loading,
   spinnerBorderColor,
+  round,
   ...props
 }: ButtonProps) => {
   const [isDisabled, setIsDisabled] = useState(disabled);
@@ -45,6 +46,7 @@ const Button = ({
 
   return (
     <StyledButton
+      round={round}
       disabled={isDisabled || loading}
       onClick={throttleOnClick}
       {...props}

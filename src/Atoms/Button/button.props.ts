@@ -23,5 +23,6 @@ export interface ButtonProps extends StyledButtonProps {
   delayThrottle?: number;
   loading?: boolean;
   spinnerBorderColor?: string;
+  round?: boolean;
   onClick: (e: React.MouseEvent) => void;
 }

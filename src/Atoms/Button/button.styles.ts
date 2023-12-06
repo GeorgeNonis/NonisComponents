@@ -3,11 +3,20 @@ import { styled, keyframes } from "@stitches/react";
 export const StyledButton = styled("button", {
   position: "relative",
   cursor: "pointer",
-  minHeight: 20,
-  minWidth: "min-content",
+  minHeight: "fit-content",
+  minWidth: "fit-content",
   "&:disabled": {
     cursor: "default",
     pointerEvents: "none",
+  },
+
+  variants: {
+    round: {
+      true: {
+        border: "1px solid gray",
+        borderRadius: 8,
+      },
+    },
   },
 });
 
