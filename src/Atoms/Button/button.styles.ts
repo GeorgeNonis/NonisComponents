@@ -1,4 +1,4 @@
-import { styled, keyframes } from "@stitches/react";
+import { keyframes, styled } from "../../Styles/stitches.config";
 
 export const StyledButton = styled("button", {
   position: "relative",
@@ -14,7 +14,7 @@ export const StyledButton = styled("button", {
     round: {
       true: {
         border: "1px solid gray",
-        borderRadius: 8,
+        br: "$2",
       },
     },
   },
@@ -31,12 +31,12 @@ export const LdsDualRing = styled("div", {
   "&:after": {
     content: '""',
     display: "block",
-    width: "20px",
-    height: "20px",
-    margin: "8px",
-    borderRadius: "50%",
+    w: "20px",
+    h: "20px",
+    m: "$2",
+    br: "50%",
     border: "2px solid #fff",
-    borderColor: "#fff transparent #fff transparent",
+    bc: "#fff transparent #fff transparent",
     animation: `${rotate} 1.2s linear infinite`,
   },
 });

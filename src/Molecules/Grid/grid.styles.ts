@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react";
+import { styled } from "../../Styles/stitches.config";
 
 export const StyledGrid = styled("div", {
   display: "grid",
@@ -36,7 +36,7 @@ export const StyledGrid = styled("div", {
     },
     round: {
       true: {
-        borderRadius: 8,
+        br: "$2",
       },
     },
   },
