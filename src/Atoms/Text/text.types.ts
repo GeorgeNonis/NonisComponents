@@ -6,4 +6,5 @@ export type StyledTextProps = StyledComponentProps<typeof StyledText>;
 
 export interface TextProps extends StyledTextProps {
   children: ReactNode;
+  fontSize?: number;
 }
