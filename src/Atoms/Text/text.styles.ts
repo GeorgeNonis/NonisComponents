@@ -73,14 +73,27 @@ export const StyledText = styled("span", {
         fontFamily: "Roboto Mono",
       },
     },
-    underLine: {
-      true: {
-        textDecorationLine: "underline",
-      },
+    textDecoration: {
+      none: { textDecoration: "none" },
+      underline: { textDecoration: "underline" },
+      lineThrough: { textDecoration: "line-through" },
     },
-    crossThrough: {
-      true: {
-        textDecorationLine: "line-through",
+    textAlign: {
+      left: { textAlign: "left" },
+      center: { textAlign: "center" },
+      right: { textAlign: "right" },
+      justify: { textAlign: "justify" },
+    },
+    textTransform: {
+      uppercase: { textTransform: "uppercase" },
+      lowercase: { textTransform: "lowercase" },
+      capitalize: { textTransform: "capitalize" },
+    },
+    overflow: {
+      ellipsis: {
+        overflow: "hidden",
+        whiteSpace: "nowrap",
+        textOverflow: "ellipsis",
       },
     },
   },
