@@ -10,11 +10,9 @@ import { StyledInput } from "./input.styles";
  * @example
  * <Input type="text" placeholder="Enter text"/>
  */
-const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ round, ...props }, ref) => {
-    return <StyledInput round={round} {...props} required ref={ref} />;
-  }
-);
+const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+  return <StyledInput {...props} required ref={ref} />;
+});
 
 Input.displayName = "Input";
 export default Input;

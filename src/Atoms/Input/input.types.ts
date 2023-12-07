@@ -3,6 +3,4 @@ import { StyledComponentProps } from "../../Types";
 
 export type StyledInputProps = StyledComponentProps<typeof StyledInput>;
 
-export type InputProps = {
-  round?: boolean;
-} & StyledInputProps;
+export type InputProps = StyledInputProps;
