@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
     "allowUmdGlobalAccess": true,
-    "jsx": "react"
+    "jsx": "preserve"
   }
 }

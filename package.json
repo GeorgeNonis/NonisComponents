@@ -1,7 +1,10 @@
 {
   "name": "noniscomponents",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.0.2",
+  "main": "src/index.ts",
+  "files": [
+    "src/**/*"
+  ],
   "license": "MIT",
   "dependencies": {
     "@stitches/react": "^1.2.8",
