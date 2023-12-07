@@ -25,3 +25,12 @@ export const Size: StoryObj<typeof Text> = {
     size: "xl",
   },
 };
+export const RedColor: StoryObj<typeof Text> = {
+  args: {
+    children: "Im a red text",
+    fontFamily: "Roboto Mono",
+    fontWeight: "100",
+    size: "xl",
+    css: { color: "red" },
+  },
+};
