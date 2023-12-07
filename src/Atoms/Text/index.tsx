@@ -12,4 +12,10 @@ const Text = forwardRef<HTMLSpanElement, TextProps>(
   }
 );
 
+Text.defaultProps = {
+  size: "m",
+  fontWeight: "500",
+  color: "black",
+};
+
 export default Text;
