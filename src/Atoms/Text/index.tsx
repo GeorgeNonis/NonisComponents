@@ -3,9 +3,9 @@ import { StyledText } from "./text.styles";
 import { TextProps } from "./text.types";
 
 const Text = forwardRef<HTMLSpanElement, TextProps>(
-  ({ children, ...props }, ref) => {
+  ({ children, size = "m", ...props }, ref) => {
     return (
-      <StyledText {...props} ref={ref}>
+      <StyledText size={size} {...props} ref={ref}>
         {children}
       </StyledText>
     );
