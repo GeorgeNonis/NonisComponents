@@ -1,6 +1,6 @@
 {
   "name": "noniscomponents",
-  "version": "0.0.0-development",
+  "version": "1.0.3",
   "main": "src/index.ts",
   "files": [
     "src/**/*"
@@ -22,28 +22,15 @@
     "@storybook/testing-library": "0.2.1",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
-    "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "semantic-release": "^22.0.10",
     "storybook": "7.4.5",
     "typescript": "^5.2.2",
     "vite": "^4.4.9"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "semantic-release": "semantic-release"
+    "build-storybook": "storybook build"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/GeorgeNonis/NonisComponents.git"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
