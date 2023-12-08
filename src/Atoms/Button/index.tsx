@@ -12,6 +12,7 @@ import { LdsDualRing, StyledButton } from "./button.styles";
  * @param {boolean} enableThrottle - If set to true, button clicks will be throttled.
  * @param {React.Ref<HTMLButtonElement>} ref - Ref forwarded for DOM access.
  * @param {number} delayThrottle - Duration in milliseconds for which the button remains disabled after a click. Default is 1 second.
+ * @param {StyledButtonProps} props - Extented props of the button element and stitches/react.
  *
  * @example
  * <Button onClick={handleClick} enableThrottle>
@@ -72,4 +73,4 @@ Button.displayName = "Button";
 
 export default Button;
 
-export { StyledButton };
+export { StyledButton, ButtonProps };

@@ -8,7 +8,7 @@ import { TextProps } from "./text.types";
  * @param {string} size - Variant - sets the font-size of the text - default 'm' - 'xs' | 's' | 'm' | 'l' 'xl' .
  * @param {string} fontWeight - Variant - sets the font-weight.
  * @param {string} textDecoration - Variant - sets the text-decoration - 'none' | 'underline' | 'line-through'  .
- * @param {StyledTextProps} props - Extented props of the element(<span/>) and stitches/react.
+ * @param {StyledTextProps} props - Extented props of the span element and stitches/react.
  */
 const Text = forwardRef<HTMLSpanElement, TextProps>(
   ({ children, size = "m", ...props }, ref) => {
@@ -20,4 +20,7 @@ const Text = forwardRef<HTMLSpanElement, TextProps>(
   }
 );
 
+Text.displayName = "Text";
 export default Text;
+
+export { TextProps, StyledText };
