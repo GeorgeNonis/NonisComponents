@@ -1,8 +1,8 @@
 ### <h1>My React Package</h1>
 
-<h1>
+<h3>
     The package is still under construction.
-</h1>
+</h3>
 
 ### \*\*\*\*
 
