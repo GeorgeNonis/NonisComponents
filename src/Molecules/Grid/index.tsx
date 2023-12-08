@@ -7,7 +7,7 @@ import { StyledGrid } from "./grid.styles";
  *
  * @param {GridProps} props - The properties for the grid.
  * @param {React.Ref<HTMLDivElement>} ref - Ref forwarded for DOM access.
- *
+ * @param {StyledGridProps} props - Extented props of the grid element and stitches/react.
  * @example
  * <Grid autoFlow="row" gap={16}>Content</Grid>
  */
@@ -21,4 +21,4 @@ Grid.displayName = "Grid";
 
 export default Grid;
 
-export { StyledGrid };
+export { StyledGrid, GridProps };

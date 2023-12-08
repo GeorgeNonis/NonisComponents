@@ -9,3 +9,7 @@ export * from "./Molecules";
 // Styles
 
 export * from "./Styles/stitches.config";
+
+// Types
+
+export * from "./Types";
