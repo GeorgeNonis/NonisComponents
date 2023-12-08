@@ -1,6 +1,6 @@
 {
   "name": "noniscomponents",
-  "version": "1.0.3",
+  "version": "0.0.0-development",
   "main": "src/index.ts",
   "files": [
     "src/**/*"
@@ -24,13 +24,19 @@
     "@types/react-dom": "^18.2.7",
     "storybook": "7.4.5",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    "semantic-release": "^22.0.10"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "semantic-release": "semantic-release"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeorgeNonis/NonisComponents.git"
   }
 }
