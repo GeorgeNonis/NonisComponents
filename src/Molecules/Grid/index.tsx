@@ -21,4 +21,5 @@ Grid.displayName = "Grid";
 
 export default Grid;
 
-export { StyledGrid, GridProps };
+export { StyledGrid };
+export type { GridProps };

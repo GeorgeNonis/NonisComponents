@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { ButtonProps } from "./button.props";
+import type { ButtonProps } from "./button.props";
 import { LdsDualRing, StyledButton } from "./button.styles";
 
 /**
@@ -73,4 +73,5 @@ Button.displayName = "Button";
 
 export default Button;
 
-export { StyledButton, ButtonProps };
+export { StyledButton };
+export type { ButtonProps };

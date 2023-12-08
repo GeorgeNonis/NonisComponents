@@ -1,4 +1,8 @@
-export { default as Text, TextProps } from "./Text";
-export { default as Heading, HeadingProps, StyledText } from "./Heading";
-export { default as Input, InputProps, StyledInput } from "./Input";
-export { default as Button, ButtonProps, StyledButton } from "./Button";
+export { default as Text } from "./Text";
+export type { TextProps } from "./Text";
+export { default as Heading, StyledText } from "./Heading";
+export type { HeadingProps } from "./Heading";
+export { default as Input, StyledInput } from "./Input";
+export type { InputProps } from "./Input";
+export { default as Button, StyledButton } from "./Button";
+export type { ButtonProps } from "./Button";

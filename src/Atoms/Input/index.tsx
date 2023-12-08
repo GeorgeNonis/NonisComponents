@@ -18,4 +18,5 @@ Input.displayName = "Input";
 
 export default Input;
 
-export { InputProps, StyledInput };
+export { StyledInput };
+export type { InputProps };

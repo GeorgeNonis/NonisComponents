@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { StyledText } from "../Text/text.styles";
-import { HeadingProps } from "./heading.types";
+import type { HeadingProps } from "./heading.types";
+import { StyledHeading } from "./heading.styles";
 
 /**
  * Creates a Heading component that can dynamically render different HTML heading elements (h1, h2, etc.).
@@ -10,12 +11,12 @@ import { HeadingProps } from "./heading.types";
  * <Heading as='h1' fontWeight='300'>This is a heading</Heading>
  */
 
-const Heading = forwardRef<HTMLHeadElement, HeadingProps>(
+const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ as, children, ...props }, ref) => {
     return (
-      <StyledText ref={ref} {...props} as={as}>
+      <StyledHeading ref={ref} {...props} as={as}>
         {children}
-      </StyledText>
+      </StyledHeading>
     );
   }
 );
@@ -24,4 +25,5 @@ Heading.displayName = "Heading";
 
 export default Heading;
 
-export { HeadingProps, StyledText };
+export { StyledText };
+export type { HeadingProps };

@@ -1,1 +1,2 @@
-export { default as Grid, GridProps, StyledGrid } from "./Grid";
+export { default as Grid, StyledGrid } from "./Grid";
+export type { GridProps } from "./Grid";

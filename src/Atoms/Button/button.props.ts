@@ -18,11 +18,9 @@ export type StyledButtonProps = StyledComponentProps<typeof StyledButton>;
  */
 export interface ButtonProps extends StyledButtonProps {
   children: ReactNode;
-  disabled: boolean;
   enableThrottle?: boolean;
   delayThrottle?: number;
   loading?: boolean;
   spinnerBorderColor?: string;
   round?: boolean;
-  onClick: (e: React.MouseEvent) => void;
 }

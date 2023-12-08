@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { StyledText } from "./text.styles";
-import { TextProps } from "./text.types";
+import type { TextProps } from "./text.types";
 
 /**
  * Text component for rendering text with customizable styles and size.
@@ -23,4 +23,5 @@ const Text = forwardRef<HTMLSpanElement, TextProps>(
 Text.displayName = "Text";
 export default Text;
 
-export { TextProps, StyledText };
+export { StyledText };
+export type { TextProps };

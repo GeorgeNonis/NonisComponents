@@ -1,5 +1,5 @@
 import { StyledGrid } from ".";
-import { StyledComponentProps } from "../../Types";
+import type { StyledComponentProps } from "../../Types";
 
 export type StyledGridProps = StyledComponentProps<typeof StyledGrid>;
 
