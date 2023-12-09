@@ -13,7 +13,7 @@ import { IconProps } from "./icon.types";
  * @param {FontAwesomeIconProps} props - Extented props of the FontAwesomeIconProps.
  *
  * @example
- * <Icon icon={faArrowDown} />
+ * <Icon icon={faArrowDown} rounded={true} color={'white'} bgc={'black'}/>
  */
 
 const Icon = ({
