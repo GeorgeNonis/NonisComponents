@@ -18,16 +18,16 @@ const Icon = ({
   width = 30,
   height = 30,
   onClick,
-  color,
+  color = "black",
+  bgc = "unset",
   rounded,
-  bgc,
   ...props
 }: IconProps) => {
   const defaultStyle = {
     cursor: onClick ? "pointer" : "default",
-    color: color ? color : "black",
+    color: color,
+    backgroundColor: bgc,
     borderRadius: rounded ? "50%" : "unset",
-    backgroundColor: bgc ? bgc : "unset",
     width,
     height,
   };
@@ -35,6 +35,7 @@ const Icon = ({
   return (
     <FontAwesomeIcon
       {...props}
+      tabIndex={onClick ? 0 : undefined}
       style={{ ...defaultStyle, padding: 4, ...style }}
       onClick={onClick}
     />
