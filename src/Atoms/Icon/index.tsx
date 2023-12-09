@@ -36,6 +36,7 @@ const Icon = ({
     <FontAwesomeIcon
       {...props}
       tabIndex={onClick ? 0 : undefined}
+      role={onClick ? "button" : undefined}
       style={{ ...defaultStyle, padding: 4, ...style }}
       onClick={onClick}
     />
