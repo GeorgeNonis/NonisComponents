@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProps } from "./icon.types";
+import { MouseEventHandler } from "react";
 
 /**
  *
@@ -38,6 +39,7 @@ const Icon = ({
   return (
     <FontAwesomeIcon
       {...props}
+      aria-hidden={!Boolean(onClick)}
       tabIndex={onClick ? 0 : undefined}
       role={onClick ? "button" : undefined}
       style={{ ...defaultStyle, padding: 4, ...style }}
