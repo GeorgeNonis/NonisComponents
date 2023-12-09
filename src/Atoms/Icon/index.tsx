@@ -13,7 +13,31 @@ import { IconProps } from "./icon.types";
  * <Icon icon={faArrowDown} />
  */
 
-const Icon = ({ style, width = 30, height = 30, ...props }: IconProps) => {
-  return <FontAwesomeIcon {...props} style={{ height, width, ...style }} />;
+const Icon = ({
+  style,
+  width = 30,
+  height = 30,
+  onClick,
+  color,
+  rounded,
+  bgc,
+  ...props
+}: IconProps) => {
+  const defaultStyle = {
+    cursor: onClick ? "pointer" : "default",
+    color: color ? color : "black",
+    borderRadius: rounded ? "50%" : "unset",
+    backgroundColor: bgc ? bgc : "unset",
+    width,
+    height,
+  };
+
+  return (
+    <FontAwesomeIcon
+      {...props}
+      style={{ ...defaultStyle, padding: 4, ...style }}
+      onClick={onClick}
+    />
+  );
 };
 export default Icon;

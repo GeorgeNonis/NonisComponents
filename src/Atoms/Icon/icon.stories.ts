@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from "@storybook/react";
-import { faArrowUp } from "./icon.styles";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import Icon from ".";
 
 export default {
@@ -15,5 +15,14 @@ export const Color: StoryObj<typeof Icon> = {
     style: {
       color: "red",
     },
+  },
+};
+
+export const onClick: StoryObj<typeof Icon> = {
+  args: {
+    onClick: () => alert("clicked"),
+    color: "blue",
+    rounded: true,
+    bgc: "black",
   },
 };
