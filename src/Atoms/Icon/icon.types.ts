@@ -1,4 +1,5 @@
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
+import { DataCy } from "../../Types";
 
 export type IconProps = {
   height?: number;
@@ -6,4 +7,5 @@ export type IconProps = {
   color?: string;
   rounded?: boolean;
   bgc?: string;
-} & FontAwesomeIconProps;
+} & FontAwesomeIconProps &
+  DataCy;
