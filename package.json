@@ -50,5 +50,33 @@
   },
   "resolutions": {
     "jackspeak": "2.1.1"
-  }
+  },
+  "keywords": [
+    "ts",
+    "react",
+    "nextjs",
+    "tsx",
+    "jsx",
+    "next",
+    "preact",
+    "component",
+    "components",
+    "create",
+    "css",
+    "css-in-js",
+    "globals",
+    "javascript",
+    "js",
+    "scope",
+    "scoped",
+    "style",
+    "styled",
+    "tokens",
+    "type",
+    "typed",
+    "types",
+    "transform",
+    "variable",
+    "variables"
+  ]
 }
