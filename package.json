@@ -1,6 +1,6 @@
 {
   "name": "noniscomponents",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Giorgos Nonis",
   "description": "React Components that save a lot of development time! 🧜‍♂️",
   "main": "dist/index.js",
