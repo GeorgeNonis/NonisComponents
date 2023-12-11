@@ -1,9 +1,28 @@
-### <h1>My React Package</h1>
+## Dcoumentation
+ Still in the works 🔧
+ 
+## Installation
 
-<h3>
-    The package is still under construction.
-</h3>
+<span>yarn</span>
 
-### \*\*\*\*
+```sh
+yarn add noniscomponents
+```
+<span>npm</span>
 
-<p>If YOU are interest to contribute or work together hit me up!</p>
+```sh
+npm i noniscomponents
+```
+
+
+## Usage
+
+```sh
+import { Button } from 'noniscomponents'
+
+<Button round={true} onClick={fetch}>Click me</Button>
+```
+
+
+## Contributing
+<p>If you are interest to contribute or work together hit me up - contributing guidelines are in in the work's!</p>
