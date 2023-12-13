@@ -52,7 +52,7 @@ const Button = ({
       onClick={throttleOnClick}
       {...props}
     >
-      {loading && !isDisabled ? (
+      {loading ? (
         <LdsDualRing
           css={{
             ...(spinnerBorderColor && {

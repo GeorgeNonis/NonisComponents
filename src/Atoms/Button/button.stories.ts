@@ -25,6 +25,7 @@ export const Disabled: StoryObj<typeof Button> = {
     round: true,
     children: "Secondary",
     disabled: true,
+    loading: true,
   },
 };
 export const Loading: StoryObj<typeof Button> = {
