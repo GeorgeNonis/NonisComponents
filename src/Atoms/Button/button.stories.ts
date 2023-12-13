@@ -17,7 +17,7 @@ export const Secondary: StoryObj<typeof Button> = {
   args: {
     children: "Alert",
     onClick: () => alert("Alert"),
-    css: { width: 80, height: 10 },
+    loading: true,
   },
 };
 export const Disabled: StoryObj<typeof Button> = {
@@ -30,7 +30,6 @@ export const Disabled: StoryObj<typeof Button> = {
 export const Loading: StoryObj<typeof Button> = {
   args: {
     children: "Loading",
-    disabled: true,
     loading: true,
     spinnerBorderColor: "red transparent red transparent",
   },
