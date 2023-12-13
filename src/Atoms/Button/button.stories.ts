@@ -20,10 +20,9 @@ export const Default: StoryObj<typeof Button> = {
 };
 export const Error: StoryObj<typeof Button> = {
   args: {
-    round: true,
     children: "Error",
     disabled: true,
-    variant: "error",
+    theme: "#ff7272",
   },
 };
 export const Loading: StoryObj<typeof Button> = {
@@ -35,47 +34,36 @@ export const Loading: StoryObj<typeof Button> = {
 export const Reset: StoryObj<typeof Button> = {
   args: {
     children: "reset",
-    variant: "reset",
-    round: true,
   },
 };
 export const SmallSize: StoryObj<typeof Button> = {
   args: {
     children: "SmallSize",
-    variant: "reset",
     size: "s",
-    round: true,
   },
 };
 export const MediumSize: StoryObj<typeof Button> = {
   args: {
     children: "MediumSize",
-    variant: "reset",
     size: "m",
-    round: true,
   },
 };
 export const LargeSize: StoryObj<typeof Button> = {
   args: {
     children: "LargeSize",
-    variant: "reset",
     size: "l",
-    round: true,
   },
 };
 export const Theme: StoryObj<typeof Button> = {
   args: {
     children: "LargeSize",
-    variant: "reset",
     size: "l",
-    round: true,
     theme: "purple",
   },
 };
 export const NoteManagerTheme: StoryObj<typeof Button> = {
   args: {
     children: "LargeSize",
-    variant: "reset",
     size: "l",
     theme: "#f26716",
   },
@@ -83,7 +71,6 @@ export const NoteManagerTheme: StoryObj<typeof Button> = {
 export const LoadingSpinnerBorderColor: StoryObj<typeof Button> = {
   args: {
     children: "LargeSize",
-    variant: "reset",
     size: "l",
     theme: "#f26716",
     loadingSpinnerProps: {
@@ -98,7 +85,6 @@ export const LoadingSpinnerBorderColor: StoryObj<typeof Button> = {
 export const DifferentLoadingSpinner: StoryObj<typeof Button> = {
   args: {
     children: "LargeSize",
-    variant: "reset",
     size: "l",
     theme: "#f26716",
     loadingSpinner: React.createElement(CircleLoader),

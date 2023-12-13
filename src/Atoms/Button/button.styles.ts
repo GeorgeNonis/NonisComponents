@@ -59,39 +59,6 @@ export const StyledButton = styled("button", {
 
     variant: {
       default: {
-        bc: "#f26716",
-        bgc: "#f26716",
-        color: "white",
-
-        "@canHover": {
-          "&:hover": {
-            bc: "rgb(249 148 86)",
-            bgc: "rgb(249 148 86)",
-          },
-        },
-
-        "&:disabled": {
-          bc: "rgb(255 201 172)",
-          bgc: "rgb(255 201 172)",
-        },
-      },
-      error: {
-        bc: "#ff7272",
-        bgc: "#ff7272",
-        color: "white",
-        "@canHover": {
-          "&:hover": {
-            bc: "#f8a3a3",
-            bgc: "#f8a3a3",
-          },
-        },
-
-        "&:disabled": {
-          bc: "#ffcdcd",
-          bgc: "#ffcdcd",
-        },
-      },
-      reset: {
         bc: "black",
         bgc: "black",
         color: "white",
