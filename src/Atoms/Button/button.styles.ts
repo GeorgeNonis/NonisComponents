@@ -7,8 +7,8 @@ export const StyledButton = styled("button", {
   minW: "fit-content",
   marginBlock: "0.7rem",
   marginInline: "auto",
-  borderRadius: "8px",
   border: "none",
+
   "&:disabled": {
     cursor: "default",
     pointerEvents: "none",
@@ -38,20 +38,39 @@ export const StyledButton = styled("button", {
 
     variant: {
       default: {
-        backgroundColor: "#f26716",
-      },
-      danger: {
-        backgroundColor: "#ff7272",
-      },
-      reset: {
-        bgc: "unset",
-        border: "unset",
-        br: "unset",
-        p: "unset",
-        "&:hover": {
-          bgc: "#28292c",
+        bc: "#f26716",
+        bgc: "#f26716",
+        color: "white",
+
+        "@canHover": {
+          "&:hover": {
+            bc: "rgb(249 148 86)",
+            bgc: "rgb(249 148 86)",
+          },
+        },
+
+        "&:disabled": {
+          bc: "rgb(255 201 172)",
+          bgc: "rgb(255 201 172)",
         },
       },
+      error: {
+        bc: "#ff7272",
+        bgc: "#ff7272",
+        color: "white",
+        "@canHover": {
+          "&:hover": {
+            bc: "#f8a3a3",
+            bgc: "#f8a3a3",
+          },
+        },
+
+        "&:disabled": {
+          bc: "#ffcdcd",
+          bgc: "#ffcdcd",
+        },
+      },
+      reset: {},
     },
   },
   defaultVariants: {
@@ -65,10 +84,12 @@ const rotate = keyframes({
   "100%": { transform: "rotate(360deg)" },
 });
 
-export const LdsDualRing = styled("div", {
+export const StyledLoadingSpinner = styled("div", {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%,-50%)",
   display: "grid",
-  width: "100%",
-  height: "100%",
   placeContent: "center",
 
   "&:after": {

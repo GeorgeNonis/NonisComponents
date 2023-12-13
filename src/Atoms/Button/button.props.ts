@@ -1,8 +1,11 @@
 import { ReactNode } from "react";
 import { StyledComponentProps } from "../../Types";
-import { StyledButton } from "./button.styles";
+import { StyledButton, StyledLoadingSpinner } from "./button.styles";
 
 export type StyledButtonProps = StyledComponentProps<typeof StyledButton>;
+export type StyledLoadingSpinnerProps = StyledComponentProps<
+  typeof StyledLoadingSpinner
+>;
 
 /**
  * `Button` simple Button component that has internal state and throttleBehavior
@@ -23,4 +26,5 @@ export interface ButtonProps extends StyledButtonProps {
   loading?: boolean;
   spinnerBorderColor?: string;
   round?: boolean;
+  loadingSpinnerProps?: StyledLoadingSpinnerProps;
 }

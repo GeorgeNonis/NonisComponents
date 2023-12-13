@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import type { ButtonProps } from "./button.props";
-import { LdsDualRing, StyledButton } from "./button.styles";
+import { StyledLoadingSpinner, StyledButton } from "./button.styles";
+import Text from "../Text";
 
 /**
  * Button component which provides loading and throttling functionality.
@@ -52,8 +53,9 @@ const Button = ({
       onClick={throttleOnClick}
       {...props}
     >
-      {loading ? (
-        <LdsDualRing
+      <Text css={{ ...(loading && { visibility: "hidden" }) }}>{children}</Text>
+      {loading && (
+        <StyledLoadingSpinner
           css={{
             ...(spinnerBorderColor && {
               "&:after": {
@@ -62,8 +64,6 @@ const Button = ({
             }),
           }}
         />
-      ) : (
-        children
       )}
     </StyledButton>
   );
@@ -73,5 +73,6 @@ Button.displayName = "Button";
 
 export default Button;
 
+export { StyledLoadingSpinner };
 export { StyledButton };
 export type { ButtonProps };
