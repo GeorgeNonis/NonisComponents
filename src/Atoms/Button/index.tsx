@@ -13,11 +13,17 @@ import { Grid } from "../../Molecules";
  *
  * @param {ReactNode} children - The content to be displayed inside the button.
  * @param {boolean} disabled - Determines if the button should start in a disabled state.
- * @param {boolean} loading - Indicates if the button should show as loading.
- * @param {Function} onClick - Callback function when the button is clicked.
  * @param {boolean} enableThrottle - If set to true, button clicks will be throttled.
- * @param {React.Ref<HTMLButtonElement>} ref - Ref forwarded for DOM access.
  * @param {number} delayThrottle - Duration in milliseconds for which the button remains disabled after a click. Default is 1 second.
+ * @param {Function} onClick - Callback function when the button is clicked.
+ * @param {boolean} loading - Indicates if the button should show as loading.
+ * @param {StyledLoadingSpinnerProps} loadingSpinner - Extented props of the Loading Spinner element and stitches/react.
+ * @param {boolean} loadingSpinner - Optional - If true border-radius: 16px.
+ * @param {Stitches.CSS} css - Stitches CSS.
+ * @param {string} theme - Optional - If set then it generates a palette for the button - background-color & hover & disable colors.
+ * @param {string} size - Optional - Variant for sizes of the button.
+ * @param {JSX.Element} LoadingSpinner - Optional - Can use your own loading spinner component.
+ * @param {React.Ref<HTMLButtonElement>} ref - Ref forwarded for DOM access.
  * @param {StyledButtonProps} props - Extented props of the button element and stitches/react.
  *
  * @example
