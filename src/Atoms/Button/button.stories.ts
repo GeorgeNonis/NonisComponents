@@ -1,5 +1,7 @@
 import { StoryObj, Meta } from "@storybook/react";
+import { CircleLoader } from "react-spinners";
 import Button from ".";
+import React from "react";
 
 export default {
   component: Button,
@@ -76,5 +78,30 @@ export const NoteManagerTheme: StoryObj<typeof Button> = {
     variant: "reset",
     size: "l",
     theme: "#f26716",
+  },
+};
+export const LoadingSpinnerBorderColor: StoryObj<typeof Button> = {
+  args: {
+    children: "LargeSize",
+    variant: "reset",
+    size: "l",
+    theme: "#f26716",
+    loadingSpinnerProps: {
+      css: {
+        "&:after": {
+          bc: "red transparent red transparent",
+        },
+      },
+    },
+  },
+};
+export const DifferentLoadingSpinner: StoryObj<typeof Button> = {
+  args: {
+    children: "LargeSize",
+    variant: "reset",
+    size: "l",
+    theme: "#f26716",
+    loadingSpinner: React.createElement(CircleLoader),
+    onClick: () => alert("clicked"),
   },
 };

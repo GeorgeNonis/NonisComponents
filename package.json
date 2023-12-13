@@ -26,6 +26,7 @@
     "@storybook/react": "7.4.5",
     "@storybook/react-vite": "7.4.5",
     "@storybook/testing-library": "0.2.1",
+    "react-spinners": "^0.13.8",
     "rollup": "^4.7.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-auto-external": "^2.0.0",
