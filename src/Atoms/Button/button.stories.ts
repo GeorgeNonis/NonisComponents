@@ -7,7 +7,6 @@ export default {
     children: "Button",
     disabled: false,
     loading: false,
-    theme: "",
   },
 } as Meta<typeof Button>;
 
@@ -44,5 +43,38 @@ export const SmallSize: StoryObj<typeof Button> = {
     variant: "reset",
     size: "s",
     round: true,
+  },
+};
+export const MediumSize: StoryObj<typeof Button> = {
+  args: {
+    children: "MediumSize",
+    variant: "reset",
+    size: "m",
+    round: true,
+  },
+};
+export const LargeSize: StoryObj<typeof Button> = {
+  args: {
+    children: "LargeSize",
+    variant: "reset",
+    size: "l",
+    round: true,
+  },
+};
+export const Theme: StoryObj<typeof Button> = {
+  args: {
+    children: "LargeSize",
+    variant: "reset",
+    size: "l",
+    round: true,
+    theme: "purple",
+  },
+};
+export const NoteManagerTheme: StoryObj<typeof Button> = {
+  args: {
+    children: "LargeSize",
+    variant: "reset",
+    size: "l",
+    theme: "#f26716",
   },
 };

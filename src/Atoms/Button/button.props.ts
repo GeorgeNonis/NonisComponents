@@ -17,7 +17,9 @@ export type StyledLoadingSpinnerProps = StyledComponentProps<
  * @number - Optional. Time in milliseconds for which the button is disabled after a click, if `enableThrottle` is true.
  * @loading - Optional. Loading state for loading spinner
  * @spinnerBorderColor - Optional. Color of the spinner
- * @onClick - Event handler called when the button is clicked.
+ * @round - Optional. If true makes round the border of the button
+ * @loadingSpinnerProps - Optional. Extended props of StyledLoadingSpinner<div>
+ * @theme - Optional. Color which from that palette will be generated for background-color,border-color, hover colors and disable colors
  */
 export interface ButtonProps extends StyledButtonProps {
   children: ReactNode;

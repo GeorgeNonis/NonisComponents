@@ -3,9 +3,11 @@ import { lighten, tint } from "polished";
 
 export const createColorVariants = (baseColor: string) => {
   const hoverColor = lighten(0.1, baseColor); // 10% lighter for hover
-  const disabledColor = tint(0.3, baseColor); // 30% lighter for disabled
+  const disabledColor = tint(0.5, baseColor); // 30% lighter for disabled
 
   return {
+    bc: baseColor,
+    bgc: baseColor,
     "@canHover": {
       "&:hover": {
         bc: hoverColor,
@@ -148,10 +150,17 @@ export const StyledLoadingSpinner = styled("div", {
         },
       },
       m: {
-        w: 20,
-        h: 20,
+        "&:after": {
+          w: 20,
+          h: 20,
+        },
       },
-      l: { w: 26, h: 246 },
+      l: {
+        "&:after": {
+          w: 26,
+          h: 24,
+        },
+      },
     },
   },
 });
