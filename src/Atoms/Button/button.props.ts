@@ -27,4 +27,5 @@ export interface ButtonProps extends StyledButtonProps {
   spinnerBorderColor?: string;
   round?: boolean;
   loadingSpinnerProps?: StyledLoadingSpinnerProps;
+  theme?: string;
 }

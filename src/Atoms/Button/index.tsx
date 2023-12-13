@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import type { ButtonProps } from "./button.props";
-import { StyledLoadingSpinner, StyledButton } from "./button.styles";
+import {
+  StyledLoadingSpinner,
+  StyledButton,
+  createColorVariants,
+} from "./button.styles";
 import Text from "../Text";
 
 /**
@@ -29,6 +33,9 @@ const Button = ({
   loading,
   spinnerBorderColor,
   round,
+  css,
+  theme,
+  size,
   ...props
 }: ButtonProps) => {
   const [isDisabled, setIsDisabled] = useState(disabled);
@@ -51,11 +58,16 @@ const Button = ({
       round={round}
       disabled={isDisabled}
       onClick={throttleOnClick}
+      css={{ ...css, ...(theme && { ...createColorVariants(theme) }) }}
+      size={size}
       {...props}
     >
-      <Text css={{ ...(loading && { visibility: "hidden" }) }}>{children}</Text>
+      <Text css={{ ...(loading && { visibility: "hidden" }) }} size={size}>
+        {children}
+      </Text>
       {loading && (
         <StyledLoadingSpinner
+          size={size}
           css={{
             ...(spinnerBorderColor && {
               "&:after": {

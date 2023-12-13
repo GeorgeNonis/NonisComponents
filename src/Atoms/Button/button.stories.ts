@@ -7,6 +7,7 @@ export default {
     children: "Button",
     disabled: false,
     loading: false,
+    theme: "",
   },
 } as Meta<typeof Button>;
 
@@ -41,7 +42,7 @@ export const SmallSize: StoryObj<typeof Button> = {
   args: {
     children: "SmallSize",
     variant: "reset",
-    size: "small",
+    size: "s",
     round: true,
   },
 };

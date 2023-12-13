@@ -1,4 +1,24 @@
 import { keyframes, styled } from "../../Styles/stitches.config";
+import { lighten, tint } from "polished";
+
+export const createColorVariants = (baseColor: string) => {
+  const hoverColor = lighten(0.1, baseColor); // 10% lighter for hover
+  const disabledColor = tint(0.3, baseColor); // 30% lighter for disabled
+
+  return {
+    "@canHover": {
+      "&:hover": {
+        bc: hoverColor,
+        bgc: hoverColor,
+      },
+    },
+
+    "&:disabled": {
+      bc: disabledColor,
+      bgc: disabledColor,
+    },
+  };
+};
 
 export const StyledButton = styled("button", {
   position: "relative",
@@ -21,15 +41,15 @@ export const StyledButton = styled("button", {
       },
     },
     size: {
-      small: {
+      s: {
         fontSize: "0.875rem",
-        h: 24,
+        height: 24,
       },
-      medium: {
+      m: {
         fontSize: "1rem",
         h: 32,
       },
-      large: {
+      l: {
         fontSize: "1.125rem",
         h: 48,
       },
@@ -87,8 +107,9 @@ export const StyledButton = styled("button", {
       },
     },
   },
+
   defaultVariants: {
-    size: "medium",
+    size: "m",
     variant: "default",
     round: true,
   },
@@ -110,12 +131,27 @@ export const StyledLoadingSpinner = styled("div", {
   "&:after": {
     content: '""',
     display: "block",
-    width: "20px",
-    height: "20px",
+    w: 20,
+    h: 20,
     margin: "8px",
     borderRadius: "50%",
     border: "2px solid #fff",
     borderColor: "#fff transparent #fff transparent",
     animation: `${rotate} 1.2s linear infinite`,
+  },
+  variants: {
+    size: {
+      s: {
+        "&:after": {
+          w: 15,
+          h: 15,
+        },
+      },
+      m: {
+        w: 20,
+        h: 20,
+      },
+      l: { w: 26, h: 246 },
+    },
   },
 });
