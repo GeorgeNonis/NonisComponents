@@ -8,23 +8,33 @@ export type StyledLoadingSpinnerProps = StyledComponentProps<
 >;
 
 /**
- * `Button` simple Button component that has internal state and throttleBehavior
+ * `Button` component properties.
  *
- * @extends StyledButtonProps (Inherits additional properties from `StyledButtonProps`)
- * @children - React elements that will be displayed inside the button.
- * @disabled - Determines whether the button is disabled or not.
- * @boolean - Optional. Determines if the button should have a throttle behavior.
- * @number - Optional. Time in milliseconds for which the button is disabled after a click, if `enableThrottle` is true.
- * @loading - Optional. Loading state for loading spinner
- * @spinnerBorderColor - Optional. Color of the spinner
- * @onClick - Event handler called when the button is clicked.
+ * @extends StyledButtonProps Inherits additional properties from `StyledButtonProps`.
+ * @param children React elements to display inside the button.
+ * @param disabled Determines whether the button is disabled.
+ * @param enableThrottle Optional. If true, enables throttle behavior on click.
+ * @param delayThrottle Optional. Time in milliseconds to disable the button after a click, applicable if `enableThrottle` is true.
+ * @param loading Optional. If true, shows a loading spinner inside the button.
+ * @param round Optional. If true, applies a rounded style to the button.
+ * @param loadingSpinnerProps Optional. Extended properties for `StyledLoadingSpinner`. For example, to change the color of the spinner:
+ *    ` loadingSpinnerProps: {
+ *    css: {
+ *      "&:after": {
+ *         bc: "red transparent red transparent",
+ *       },
+ *    },
+ * },`
+ * @param theme Optional. Specifies the base color for generating button variants. Should be a valid CSS color.
+ * @param loadingSpinner Optional. Provide your own loading component.
  */
 export interface ButtonProps extends StyledButtonProps {
   children: ReactNode;
   enableThrottle?: boolean;
   delayThrottle?: number;
   loading?: boolean;
-  spinnerBorderColor?: string;
   round?: boolean;
   loadingSpinnerProps?: StyledLoadingSpinnerProps;
+  theme?: string;
+  loadingSpinner?: JSX.Element;
 }

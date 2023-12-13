@@ -1,7 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import type { ButtonProps } from "./button.props";
-import { StyledLoadingSpinner, StyledButton } from "./button.styles";
+import {
+  StyledLoadingSpinner,
+  StyledButton,
+  createColorVariants,
+} from "./button.styles";
 import Text from "../Text";
+import { Grid } from "../../Molecules";
 
 /**
  * Button component which provides loading and throttling functionality.
@@ -27,8 +32,12 @@ const Button = ({
   delayThrottle = 1000,
   onClick,
   loading,
-  spinnerBorderColor,
+  loadingSpinnerProps,
   round,
+  css,
+  theme,
+  size,
+  loadingSpinner,
   ...props
 }: ButtonProps) => {
   const [isDisabled, setIsDisabled] = useState(disabled);
@@ -46,25 +55,41 @@ const Button = ({
 
   useEffect(() => setIsDisabled(disabled), [disabled]);
 
+  const spinner = loadingSpinner ? (
+    <Grid
+      css={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%,-50%)",
+      }}
+    >
+      {loadingSpinner}
+    </Grid>
+  ) : (
+    <StyledLoadingSpinner
+      size={size}
+      {...(loadingSpinnerProps && { ...loadingSpinnerProps })}
+    />
+  );
+
   return (
     <StyledButton
       round={round}
       disabled={isDisabled}
       onClick={throttleOnClick}
+      css={{
+        ...css,
+        ...(theme && { ...createColorVariants(theme) }),
+        ...(loading && { pointerEvents: "none" }),
+      }}
+      size={size}
       {...props}
     >
-      <Text css={{ ...(loading && { visibility: "hidden" }) }}>{children}</Text>
-      {loading && (
-        <StyledLoadingSpinner
-          css={{
-            ...(spinnerBorderColor && {
-              "&:after": {
-                borderColor: spinnerBorderColor,
-              },
-            }),
-          }}
-        />
-      )}
+      <Text css={{ ...(loading && { visibility: "hidden" }) }} size={size}>
+        {children}
+      </Text>
+      {loading && spinner}
     </StyledButton>
   );
 };
