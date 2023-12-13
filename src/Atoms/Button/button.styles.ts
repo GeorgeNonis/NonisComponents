@@ -17,7 +17,6 @@ export const StyledButton = styled("button", {
   variants: {
     round: {
       true: {
-        border: "1px solid",
         br: "$2",
       },
     },
@@ -70,12 +69,28 @@ export const StyledButton = styled("button", {
           bgc: "#ffcdcd",
         },
       },
-      reset: {},
+      reset: {
+        bc: "black",
+        bgc: "black",
+        color: "white",
+        "@canHover": {
+          "&:hover": {
+            bc: "#494949",
+            bgc: "#494949",
+          },
+        },
+
+        "&:disabled": {
+          bc: "rgb(121 121 121)",
+          bgc: "rgb(121 121 121)",
+        },
+      },
     },
   },
   defaultVariants: {
     size: "medium",
     variant: "default",
+    round: true,
   },
 });
 

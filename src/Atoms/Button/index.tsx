@@ -49,7 +49,7 @@ const Button = ({
   return (
     <StyledButton
       round={round}
-      disabled={isDisabled || loading}
+      disabled={isDisabled}
       onClick={throttleOnClick}
       {...props}
     >
