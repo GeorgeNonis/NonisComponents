@@ -74,6 +74,24 @@ export const StyledButton = styled("button", {
           bgc: "rgb(121 121 121)",
         },
       },
+      plain: {
+        border: "1px solid black",
+        backgroundColor: "unset",
+        color: "black",
+
+        "&:disabled": {
+          borderColor: "#e5e5e5",
+          color: "#a0a0a0",
+          opacity: 0.7,
+        },
+      },
+      reset: {
+        bgc: "unset",
+        border: "unset",
+        br: "unset",
+        p: "unset",
+        m: "unset",
+      },
     },
   },
 
@@ -109,6 +127,13 @@ export const StyledLoadingSpinner = styled("div", {
     animation: `${rotate} 1.2s linear infinite`,
   },
   variants: {
+    variant: {
+      plain: {
+        "&:after": {
+          borderColor: "black transparent black transparent",
+        },
+      },
+    },
     size: {
       s: {
         "&:after": {
