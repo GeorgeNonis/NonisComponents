@@ -81,7 +81,6 @@ export const StyledButton = styled("button", {
 
         "&:disabled": {
           borderColor: "#e5e5e5",
-          // backgroundColor: "#e5e5e5",
           color: "#a0a0a0",
           opacity: 0.7,
         },
