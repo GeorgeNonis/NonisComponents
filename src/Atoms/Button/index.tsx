@@ -5,7 +5,6 @@ import {
   StyledButton,
   createColorVariants,
 } from "./button.styles";
-import Text from "../Text";
 import { Grid } from "../../Molecules";
 
 /**
@@ -44,6 +43,7 @@ const Button = ({
   theme,
   size,
   loadingSpinner,
+  variant,
   ...props
 }: ButtonProps) => {
   const [isDisabled, setIsDisabled] = useState(disabled);
@@ -75,6 +75,7 @@ const Button = ({
   ) : (
     <StyledLoadingSpinner
       size={size}
+      variant={variant === "plain" ? "plain" : undefined}
       {...(loadingSpinnerProps && { ...loadingSpinnerProps })}
     />
   );
@@ -82,19 +83,19 @@ const Button = ({
   return (
     <StyledButton
       round={round}
-      disabled={isDisabled}
+      disabled={isDisabled || loading}
       onClick={throttleOnClick}
+      variant={variant}
       css={{
         ...css,
         ...(theme && { ...createColorVariants(theme) }),
-        ...(loading && { pointerEvents: "none" }),
       }}
       size={size}
       {...props}
     >
-      <Text css={{ ...(loading && { visibility: "hidden" }) }} size={size}>
+      <div style={{ ...(loading && { visibility: "hidden", opacity: 0 }) }}>
         {children}
-      </Text>
+      </div>
       {loading && spinner}
     </StyledButton>
   );

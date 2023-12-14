@@ -31,9 +31,9 @@ export const Loading: StoryObj<typeof Button> = {
     loading: true,
   },
 };
-export const Reset: StoryObj<typeof Button> = {
+export const BlackTheme: StoryObj<typeof Button> = {
   args: {
-    children: "reset",
+    children: "BlackTheme",
   },
 };
 export const SmallSize: StoryObj<typeof Button> = {
@@ -88,6 +88,14 @@ export const DifferentLoadingSpinner: StoryObj<typeof Button> = {
     size: "l",
     theme: "#f26716",
     loadingSpinner: React.createElement(CircleLoader),
+    onClick: () => alert("clicked"),
+  },
+};
+export const Reset: StoryObj<typeof Button> = {
+  args: {
+    children: "Reset",
+    size: "l",
+    variant: "reset",
     onClick: () => alert("clicked"),
   },
 };
